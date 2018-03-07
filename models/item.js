@@ -1,7 +1,7 @@
 module.exports = function(sequelize, DataTypes) {
 	var Item = sequelize.define('Item', {
 		name: {
-			type: DataTypes.String,
+			type: DataTypes.STRING,
 			allowNull: false
 		},
 		category: {
