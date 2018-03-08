@@ -1,4 +1,4 @@
-/*INDEX STYLING*/
+/*LOGIN STYLING*/
 
 .login_signup_panel {
 	margin-top: 50%;
@@ -25,3 +25,19 @@
 	text-align: center;
 	margin-top: 25%;
 }
+
+/*INDEX STYLING*/
+
+#offering_scroll, #community_items_scroll {
+  overflow: scroll;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+#offering_panel, #community_items_panel {
+	background-color: black;
+	margin-top: 10%;
+	text-align: center;
+	padding: 10%;
+}
+
