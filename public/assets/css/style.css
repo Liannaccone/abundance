@@ -1,0 +1,27 @@
+/*INDEX STYLING*/
+
+.login_signup_panel {
+	margin-top: 50%;
+	background-color: black;
+	opacity: .8;
+	border-radius: 25px;
+	padding: 20%;
+	
+}
+
+#login_panel, #signup_panel {
+	text-align: center;
+}
+
+.about_us {
+	margin-top: 20%;
+	text-align: center;
+	background-color: black;
+}
+
+.footer {
+	width: 100% auto;
+	background-color: black;
+	text-align: center;
+	margin-top: 25%;
+}
