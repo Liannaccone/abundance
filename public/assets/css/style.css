@@ -1,8 +1,6 @@
-/*ALL PAGES*/
+/*@import "compass/css3";
 
-@import "compass/css3";
-
-@import url(https://fonts.googleapis.com/css?family=Give+You+Glory);
+@import url(https://fonts.googleapis.com/css?family=Give+You+Glory);*/
 
 .wrapper {
 	background: url(../images/orangesBG.gif) no-repeat top center fixed;
@@ -10,6 +8,10 @@
 	height: auto;
 	position: relative;
 	width: 100%;
+}
+
+body, html {
+	font-family: 'Nanum Pen Script', cursive;
 }
 
 /*LOGIN STYLING*/
