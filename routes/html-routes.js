@@ -17,14 +17,14 @@ var app = express();
 module.exports = function(app) {
 
 //set up view engine
-app.set('view engine','ejs');
+// app.set('view engine','ejs');
 
 //set up routes
 app.use('/auth',authRoutes);
 
-//create home route
-app.get('/', (req, res)=>{
-	res.render('home');
+app.get('/', function(req, res){
+	// res.render('auth home');
+	res.sendFile(path.join(__dirname,"../test-views/home.html"))
 
 });
 

@@ -1,9 +1,11 @@
 const router = require('express').Router();
 const passport = require ('passport');
+var path=require("path");
 
 //auth login
 router.get('/login', (req,res)=>{
-	res.render('login');
+	// res.render('login');
+	res.sendFile(path.join(__dirname,"../test-views/login.html"))
 });
 
 //auth logout

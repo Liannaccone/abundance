@@ -8,6 +8,9 @@
 
 var express = require('express');
 var bodyParser = require('body-parser');
+var authRoutes = require('./routes/auth-routes');
+var passportSetup = require('./config/passport-setup');
+var path=require("path");
 
 // sets up the Express app...
 var app = express();
@@ -26,6 +29,9 @@ app.use(bodyParser.json());
 // Static directory
 app.use(express.static("public"));
 
+//set up auth routes
+app.use('/auth',authRoutes);
+
 // ----------------------------------------------------------
 //           ROUTES
 // ----------------------------------------------------------
@@ -33,6 +39,8 @@ app.use(express.static("public"));
 require('./routes/html-routes.js')(app);
 require('./routes/user-api-routes.js')(app);
 require('./routes/item-api-routes.js')(app);
+
+
 
 // Syncing our sequelize models and then starting our Express app
 
