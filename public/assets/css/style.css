@@ -1,3 +1,17 @@
+/*ALL PAGES*/
+
+@import "compass/css3";
+
+@import url(https://fonts.googleapis.com/css?family=Give+You+Glory);
+
+.wrapper {
+	background: url(../images/orangesBG.gif) no-repeat top center fixed;
+	background-size: cover;
+	height: auto;
+	position: relative;
+	width: 100%;
+}
+
 /*LOGIN STYLING*/
 
 .login_signup_panel {
