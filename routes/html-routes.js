@@ -28,9 +28,23 @@ module.exports = function(app) {
 
 	// });
 
+	// route to log in page
 	app.get('/', function(req, res) {
+		res.render('login');
+	});
+
+	app.get('/dashboard', function(req, res) {
 		res.render('index');
-	})
+	});
+
+	app.get('/forum', function(req, res) {
+		res.render('forum');
+	});
+
+	app.get('/recipes', function(req, res) {
+		res.render('recipes');
+	});
+
 
 
 
