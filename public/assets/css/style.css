@@ -55,3 +55,72 @@
 	padding: 10%;
 }
 
+
+/*Forum Styling*/
+/*body {
+    background-image: url("4.jpeg");
+
+  position: relative;
+
+
+}*/
+
+
+.navbar {
+    margin-bottom: 1%;
+    opacity: .8;
+}
+
+#title {
+    text-align: center;
+    font-family: 'Tangerine', cursive;
+    font-size: 120px;
+    color: white;
+    opacity: .9;
+}
+
+.btn {
+    text-align: center;
+    align-self: center;
+}
+
+.wrapper{
+	opacity: .9;
+}
+
+p{
+	color:white;
+	font-family: 'Poiret One', cursive;
+	font-weight: bolder;
+	font-size: 18px;
+}
+
+
+.pic-container {
+  width: 1000px;
+  margin: 0 auto;
+  overflow-y: scroll;
+  background-color: black;
+  opacity: .3;
+  border-radius: 20px;
+}
+
+.pic-row {
+ 
+  width: 960px;
+  height: 500px;
+  overflow: auto;
+}
+
+.container{
+	margin-bottom: 2%;
+}
+
+hr{
+	height: 20px;
+	color: black;
+	background-color: black;
+
+}
+
+/*==============================*/
