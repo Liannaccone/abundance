@@ -32,6 +32,12 @@ app.use(express.static("public"));
 //set up auth routes
 app.use('/auth',authRoutes);
 
+// set up handlebars...
+var exphbs = require("express-handlebars");
+
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
+
 // ----------------------------------------------------------
 //           ROUTES
 // ----------------------------------------------------------
