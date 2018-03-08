@@ -17,10 +17,61 @@
                         <a class="nav-link disabled" href="#">Disabled</a>
                     </li>
                 </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="text" placeholder="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+                    Settings
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Change Your Profile Information</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Email address</label>
+                                        <input type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp" placeholder="Update email here">
+                                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="InputPassword1">Password</label>
+                                        <input type="password" class="form-control" id="InputPassword1" placeholder="Update password here">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="photo">Insert Link to Your Photo</label>
+                                        <input type="input" class="form-control" id="InputPhoto1" placeholder="Update Photo">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="street-address">Street Address</label>
+                                        <input type="input" class="form-control" id="InputStreet1" placeholder="Update Street Address">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="city">City</label>
+                                        <input type="input" class="form-control" id="InputCity1" placeholder="Update City">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="state">State</label>
+                                        <input type="input" class="form-control" id="InputState1" placeholder="Update State">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="zip">Zip</label>
+                                        <input type="input" class="form-control" id="InputZip1" placeholder="Update Zip">
+                                    </div>
+                                    
+                                    <button type="submit" class="btn btn-primary">Submit Changes</button>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </nav>
     </div>
@@ -30,7 +81,7 @@
         <h1>Your Offering</h1>
         <div class="row">
             <div class="col-md-6" id="offering_scroll">
-                <p>ADDD THUMBNAILS HERE</p>
+                <p>####ADD THUMBNAILS HERE####</p>
             </div>
             <div class="col-md-6">
                 <h3>Add Your Items Here</h3>
@@ -44,7 +95,13 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <p>THUMBNAILS OF PRODUCE TO ADD</p>
+                            <nav class="navbar navbar-light bg-light">
+                                <form class="form-inline">
+                                    <input class="form-control mr-sm-2" type="search" placeholder="Search for items here" aria-label="Search">
+                                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                                </form>
+                            </nav>
+                            <p>####THUMBNAILS OF PRODUCE TO ADD####</p>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-primary">Save</button>
@@ -56,13 +113,12 @@
         </div>
     </div>
 </div>
-
 <div class="row">
     <div class="col-md-12" id="community_items_panel">
         <h1>Community Marketplace</h1>
-            <div class="row">
-                <div class="col-md-12" id="community_items_scroll">
+        <div class="row">
+            <div class="col-md-12" id="community_items_scroll">####THUMBNAILS OF COMMUNITY ITEMS####
             </div>
-
+        </div>
     </div>
 </div>
