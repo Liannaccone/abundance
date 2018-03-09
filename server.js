@@ -1,57 +1,54 @@
-// This file is the initial starting point for the Node/Express server.
-// ************************************************************
-
-
-// ----------------------------------------------------------
-//           DEPENDENCIES
-// ----------------------------------------------------------
-
-var express = require('express');
-var bodyParser = require('body-parser');
-var authRoutes = require('./routes/auth-routes');
-var passportSetup = require('./config/passport-setup');
-var path=require("path");
-// hellooo
-// sets up the Express app...
-var app = express();
+var express = require('express')
+var app = express()
+var passport = require('passport')
+var session = require('express-session')
+var bodyParser = require('body-parser')
+var env = require('dotenv').load()
+var exphbs = require('express-handlebars')
+ 
 var PORT = process.env.PORT || 3000;
-
-// require models for syncing...
-var db = require('./models');
-
-// set up Express app to handle data parsing...
-
-// parse appliucation/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: true }));
-// parse application/json
+ 
+//For BodyParser
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
 app.use(bodyParser.json());
+ 
+ 
+// For Passport
+app.use(session({
+    secret: 'bodhi the dog',
+    resave: true,
+    saveUninitialized: true
+})); // session secret
+app.use(passport.initialize());
+app.use(passport.session()); // persistent login sessions
+ 
+ 
+//For Handlebars
+// app.set('views', __dirname'/app/views')
+app.engine('hbs', exphbs({
+    extname: '.hbs',
+    defaultLayout: 'main'
+}));
+app.set('view engine', '.hbs');
 
 // Static directory
 app.use(express.static("./public"));
-
-
-
-//set up auth routes
-app.use('/auth',authRoutes);
-
-// set up handlebars...
-var exphbs = require("express-handlebars");
-
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-app.set("view engine", "handlebars");
-
-// ----------------------------------------------------------
-//           ROUTES
-// ----------------------------------------------------------
-
-require('./routes/html-routes.js')(app);
-require('./routes/user-api-routes.js')(app);
-require('./routes/item-api-routes.js')(app);
-
-
-
-// Syncing our sequelize models and then starting our Express app
-
+ 
+//Models
+var db = require("./models");
+ 
+//Routes
+ 
+var authRoute = require('./routes/auth.js')(app,passport);
+ 
+ 
+//load passport strategies
+require('./config/passport/passport.js')(passport, db.user);
+ 
+ 
+//Sync Database
 db.sequelize.sync({ force: true }).then(function() {
   app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);

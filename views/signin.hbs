@@ -4,7 +4,7 @@
     <div class="col-md-4">
         <h1>Welcome to</h1>
         <div class="logoContainer">
-        <img src="https://photos-3.dropbox.com/t/2/AABKlYCad9AehUOIj0p4ZflXBQg46fIQFHui9wsag8MU0A/12/225443344/png/32x32/1/_/1/2/abundanceLogo.png/EPGunKkBGOsjIAIoAg/8YVsZMSUyYoui_YDpQGKSi9Mhr5awHF7UiCElZIuIWM?preserve_transparency=1&size=2048x1536&size_mode=3" alt="Abundance Logo" height="300px" width="300px">
+        <img src="http://i65.tinypic.com/b3v7zb.png" alt="Abundance Logo" height="300px" width="300px">
         </div>
     </div>
     <div class="col-md-4"></div>
@@ -31,10 +31,16 @@
     <div class="col-md-4">
         <div class="login_signup_panel">
                 <div id="login_panel">
-                    <a href="#" class="btn btn-primary btn-lg disabled" role="button" aria-disabled="true">Click here to Login</a>
+                        <form id="signin" name="signin" method="post" action="signin">
+                            <label for="email">Email Address</label>
+                            <input class="text" name="email" type="text" />
+                            <label for="password">Password</label>
+                            <input name="password" type="password" />
+                            <input class="btn" type="submit" value="Sign In" />
+                        </form>
                     <h4> OR </h4>
                 <div id="signup_panel">
-                    <a href="#" class="btn btn-primary btn-lg disabled" role="button" aria-disabled="true">Click here to Signup</a>
+                    <a href="/signup" class="btn btn-primary btn-lg disabled" role="button">Click here to Signup</a>
                 </div>
         </div>
     </div>

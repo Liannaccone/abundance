@@ -1,6 +1,4 @@
-/*@import "compass/css3";
 
-@import url(https://fonts.googleapis.com/css?family=Give+You+Glory);*/
 
 .wrapper {
 	background: url(../images/orangesBG.gif) no-repeat top center fixed;
@@ -117,10 +115,7 @@ h4 {
 /*Forum Styling*/
 /*body {
     background-image: url("4.jpeg");
-
   position: relative;
-
-
 }*/
 
 
@@ -181,4 +176,6 @@ hr{
 
 }
 
+/*@import "compass/css3";
+@import url(https://fonts.googleapis.com/css?family=Give+You+Glory);*/
 /*==============================*/
