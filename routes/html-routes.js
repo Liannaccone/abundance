@@ -34,7 +34,7 @@ module.exports = function(app) {
 	});
 
 	app.get('/dashboard', function(req, res) {
-		res.render('index');
+		res.render('dashboard');
 	});
 
 	app.get('/forum', function(req, res) {
