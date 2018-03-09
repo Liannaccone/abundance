@@ -10,7 +10,6 @@ module.exports = function(sequelize, Sequelize) {
 			allowNull: false
 		}
 	});
-
 	// Useritem.associate = function(models) {
 	// 	// all items belong to a specific User
 	// 	// adding foreign key constraint so an Item cannot be created without a User
