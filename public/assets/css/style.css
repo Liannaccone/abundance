@@ -112,14 +112,9 @@ h4 {
 	padding: 10%;
 }
 
-
+/*==============================================*/
 /*Forum Styling*/
-/*body {
-    background-image: url("4.jpeg");
-  position: relative;
-}*/
-
-
+/*==============================================*/
 .navbar {
     margin-bottom: 1%;
     opacity: .8;
@@ -142,29 +137,48 @@ h4 {
 	opacity: .9;
 }
 
-p{
-	color: #401d0a;
+#text{
+	
+	color: black;
 	font-family: 'Poiret One', cursive;
 	font-weight: bolder;
 	font-size: 18px;
+  margin: 0;
 }
 
 
-.pic-container {
+.post-container {
   width: 1000px;
   margin: 0 auto;
   overflow-y: scroll;
-  background-color: #c3bd91;
-  opacity: .3;
+  background-color: lightblue;
+  opacity: .9;
   border-radius: 20px;
 }
 
-.pic-row {
- 
+.post-row {
   width: 960px;
   height: 500px;
   overflow: auto;
 }
+
+.comments-container {
+  width: 750px;
+  margin: 0 auto;
+  overflow-y: scroll;
+  background-color: lightblue;
+  opacity: .9;
+  border-radius: 20px;
+}
+
+.comments-row {
+  
+  width: 700px;
+  height: 500px;
+  overflow: auto;
+}
+
+
 
 .container{
 	margin-bottom: 2%;
@@ -172,11 +186,29 @@ p{
 
 hr{
 	height: 20px;
-	color: #c3bd91;
-	background-color: #c3bd91;
+	color: black;
+	background-color: black;
+  margin-left: 10px;
 
 }
+#post-div{
+  margin: 15px;
+}
 
+.modal-dialog{
+  widows: 1000px;
+  margin: -500;
+}
+
+#comments{
+  margin: 10px;
+}
+
+
+iframe{
+  float: right;
+}
+/*====================================*/
 /*@import "compass/css3";
 @import url(https://fonts.googleapis.com/css?family=Give+You+Glory);*/
 /*==============================*/
