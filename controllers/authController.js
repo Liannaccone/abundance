@@ -18,15 +18,19 @@ var db = require("../models");
     });
     // queries db for all user items where userID is reqUser
     // db.Useritem.findAll({
-    //   userID: reqUser
+    //   userId: reqUser
     // }).then(function(data) {
     //   hbsObject.useritem = data
-    //   console.log(hbsObject);
-    //   res.render("dashboard", hbsObject);
     // });
-    // queries db for all user items where userID is not reqUser
+    // // queries db for all user items where userID is not reqUser
     // db.Useritem.findAll({
-    //   user
+    //   userId: {
+    //     $not:reqUser
+    //   }
+    // }).then(function(data) {
+    //   hbsObject.communityitem = data
+    //   console.log(hbsObject);
+    //   res.render('dashboard', hbsObject)
     // })
   }
 
