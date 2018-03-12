@@ -10,13 +10,24 @@ var db = require("../models");
   }
 
   exports.dashboard = function(req, res) {
+    var reqUser = req.session.passport.user;
+    var hbsObject = {};
+    // queries db for all products
     db.Product.findAll({}).then(function(data) {
-      var hbsObject = {
-        product: data
-      };
-      // console.log(hbsObject);
-      res.render("dashboard", hbsObject);
+      hbsObject.product = data
     });
+    // queries db for all user items where userID is reqUser
+    // db.Useritem.findAll({
+    //   userID: reqUser
+    // }).then(function(data) {
+    //   hbsObject.useritem = data
+    //   console.log(hbsObject);
+    //   res.render("dashboard", hbsObject);
+    // });
+    // queries db for all user items where userID is not reqUser
+    // db.Useritem.findAll({
+    //   user
+    // })
   }
 
   exports.forum = function(req, res) {
