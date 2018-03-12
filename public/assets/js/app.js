@@ -2,7 +2,8 @@ $(document).ready(function(){
 	
 	$('.add-button').on('click', function(event) {
 		var newProduct = {
-			product_id: $(this).data('id')
+			product_id: $(this).data('id'),
+			product_name: $(this).data('name')
 		}
 		// ajax call to /api/useritem' method='post'>
 	    $.ajax("/api/useritem", {

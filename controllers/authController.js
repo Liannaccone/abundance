@@ -17,6 +17,7 @@ var db = require("../models");
       hbsObject.product = data
     });
     // queries db for all user items where userID is reqUser
+    // need to also get item_name and img url out of this, join to product table?
     db.Useritem.findAll({
       userId: reqUser
     }).then(function(data) {
@@ -51,10 +52,12 @@ var db = require("../models");
   exports.addUserItem = function(req, res) {
         var reqUser = req.session.passport.user;
         var reqProduct = req.body.product_id;
+        var reqName = req.body.product_name;
 
         db.Useritem.create({
           ProductId: reqProduct,
-          userId: reqUser
+          userId: reqUser,
+          name: reqName
           }).then(function(data)  {
             console.log('New user item added')
           });

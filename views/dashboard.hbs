@@ -79,10 +79,14 @@
 </div>
 <div class="row">
     <div class="col-md-12" id="offering_panel">
-        <h1>Your Offering</h1>
+        <h1>What's abundant in your garden?</h1>
         <div class="row">
             <div class="col-md-6" id="offering_scroll">
-                <p>####ADD THUMBNAILS HERE####</p>
+                <div>
+                    {{#each useritem}}
+                        {{>items/useritem-block}}
+                    {{/each}}
+                </div>
             </div>
             <div class="col-md-6">
                 <h3>Add Your Items Here</h3>
