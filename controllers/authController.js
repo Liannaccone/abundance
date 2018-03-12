@@ -11,12 +11,14 @@ var db = require("../models");
 
   exports.dashboard = function(req, res) {
     var reqUser = req.session.passport.user;
+    console.log('\n\n******\n\n')
     var hbsObject = {};
     // queries db for all products
     db.Product.findAll({}).then(function(data) {
       hbsObject.product = data
     });
     // queries db for all user items where userID is reqUser
+    // need to also get item_name and img url out of this, join to product table?
     db.Useritem.findAll({
       userId: reqUser
     }).then(function(data) {
@@ -24,18 +26,23 @@ var db = require("../models");
     });
     // queries db for all user items where userID is not reqUser
     db.Useritem.findAll({
-      userId: {
+      where: {
+        userId: {
         $not:reqUser
+        }
       }
     }).then(function(data) {
       hbsObject.communityitem = data
-      console.log(hbsObject);
       res.render('dashboard', hbsObject)
     })
   }
 
   exports.forum = function(req, res) {
-      res.render('forum');
+    // var hbsObject = {}
+    // db.Post.findAll({}).then(function(data){
+    //   dbsObject.post = data
+    //   res.render('forum', hbsObject);
+    // })
   }
 
   exports.logout = function(req, res) {
@@ -49,13 +56,26 @@ var db = require("../models");
   // ================
 
   exports.addUserItem = function(req, res) {
-        console.log("\nhello!!!!\n", req.user)
-        // db.useritem.create([
-        //     'product_id', 'userId'
-        //     ], [
-        //     req.body.product_id, req.user
-        //     ], function(data)  {
-        //     alert('ot worked!')
-        //     // res.json(dbItem);
-        // });
+        var reqUser = req.session.passport.user;
+        var reqProduct = req.body.product_id;
+        var reqName = req.body.product_name;
+
+        db.Useritem.create({
+          ProductId: reqProduct,
+          userId: reqUser,
+          name: reqName
+          }).then(function(data)  {
+            console.log('New user item added')
+          });
+  }
+
+  exports.removeUserItem = function(req, res){
+    var reqId = req.body.id
+    db.Useritem.destroy({
+      where: {
+        id: reqId
+      }
+    }).then(function() {
+      console.log('Successfully deleted entry')
+    })
   }
