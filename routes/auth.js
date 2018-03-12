@@ -38,17 +38,8 @@ module.exports = function(app, passport) {
  
     ));
 
-    app.post('/api/useritem', function(req, res) {
-        console.log("\nhello!!!!\n", req.user)
-        // db.useritem.create([
-        //     'product_id', 'userId'
-        //     ], [
-        //     req.body.product_id, req.user
-        //     ], function(data)  {
-        //     alert('ot worked!')
-        //     // res.json(dbItem);
-        // });
-    });
+    app.post('/api/useritem', isLoggedIn, authController.addUserItem);
+
  
 
     function isLoggedIn(req, res, next) {

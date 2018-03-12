@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	
-	$('.product-button').on('click', function(event) {
+	$('.add-button').on('click', function(event) {
 		var newProduct = {
 			product_id: $(this).parent().data('id')
 		}
@@ -19,14 +19,10 @@ $(document).ready(function(){
 
     $("[rel='tooltip']").tooltip();    
  
-    // $('.thumbnail').hover(
-    //     function(){
-    //         $(this).find('.caption').slideDown(250); //.fadeIn(250)
-    //     },
-    //     function(){
-    //         $(this).find('.caption').slideUp(250); //.fadeOut(205)
-    //     }
-    // );
-
+    $('.thumbnail').hover(
+        function(){
+            $(this).find('.caption').toggle();
+        }
+    );
 
 });
