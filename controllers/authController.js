@@ -11,6 +11,7 @@ var db = require("../models");
 
   exports.dashboard = function(req, res) {
     var reqUser = req.session.passport.user;
+    console.log('\n\n******\n\n')
     var hbsObject = {};
     // queries db for all products
     db.Product.findAll({}).then(function(data) {
@@ -25,18 +26,23 @@ var db = require("../models");
     });
     // queries db for all user items where userID is not reqUser
     db.Useritem.findAll({
-      userId: {
+      where: {
+        userId: {
         $not:reqUser
+        }
       }
     }).then(function(data) {
       hbsObject.communityitem = data
-      console.log(hbsObject);
       res.render('dashboard', hbsObject)
     })
   }
 
   exports.forum = function(req, res) {
-      res.render('forum');
+    // var hbsObject = {}
+    // db.Post.findAll({}).then(function(data){
+    //   dbsObject.post = data
+    //   res.render('forum', hbsObject);
+    // })
   }
 
   exports.logout = function(req, res) {

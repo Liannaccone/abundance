@@ -122,7 +122,10 @@
     <div class="col-md-12" id="community_items_panel">
         <h1>Community Marketplace</h1>
         <div class="row">
-            <div class="col-md-12" id="community_items_scroll">####THUMBNAILS OF COMMUNITY ITEMS####
+            <div>
+                {{#each communityitem}}
+                    {{>items/communityitem-block}}
+                {{/each}}
             </div>
         </div>
     </div>
