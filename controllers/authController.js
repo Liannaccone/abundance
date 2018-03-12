@@ -17,21 +17,21 @@ var db = require("../models");
       hbsObject.product = data
     });
     // queries db for all user items where userID is reqUser
-    // db.Useritem.findAll({
-    //   userId: reqUser
-    // }).then(function(data) {
-    //   hbsObject.useritem = data
-    // });
-    // // queries db for all user items where userID is not reqUser
-    // db.Useritem.findAll({
-    //   userId: {
-    //     $not:reqUser
-    //   }
-    // }).then(function(data) {
-    //   hbsObject.communityitem = data
-    //   console.log(hbsObject);
-    //   res.render('dashboard', hbsObject)
-    // })
+    db.Useritem.findAll({
+      userId: reqUser
+    }).then(function(data) {
+      hbsObject.useritem = data
+    });
+    // queries db for all user items where userID is not reqUser
+    db.Useritem.findAll({
+      userId: {
+        $not:reqUser
+      }
+    }).then(function(data) {
+      hbsObject.communityitem = data
+      console.log(hbsObject);
+      res.render('dashboard', hbsObject)
+    })
   }
 
   exports.forum = function(req, res) {
