@@ -62,3 +62,14 @@ var db = require("../models");
             console.log('New user item added')
           });
   }
+
+  exports.removeUserItem = function(req, res){
+    var reqId = req.body.id
+    db.Useritem.destroy({
+      where: {
+        id: reqId
+      }
+    }).then(function() {
+      console.log('Successfully deleted entry')
+    })
+  }

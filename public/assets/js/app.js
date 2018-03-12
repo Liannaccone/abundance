@@ -18,6 +18,20 @@ $(document).ready(function(){
 	    );
 	});
 
+	$('.remove-button').on('click', function(event) {
+		var condition = {
+			id: $(this).data('id')
+		}
+		// ajax call to /api/useritem method delete
+		$.ajax('/api/useritem', {
+			type: 'DELETE',
+			data: condition
+		}).then(function() {
+			console.log('deleted user item', id);
+			location.reload();
+		})
+	})
+
     $("[rel='tooltip']").tooltip();    
  
     $('.thumbnail').hover(
