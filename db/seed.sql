@@ -1,6 +1,6 @@
 USE abundance_db;
 
-INSERT INTO produce_items (item_name, photo_url, category)
+INSERT INTO products (item_name, photo_url, category)
 VALUES	('apple', 'apple.jpg', 'fruit'),
 		('avocado','avocado.jpg', 'fruit'),
 		('blackberry','blackberry.jpg', 'fruit'),
@@ -31,3 +31,7 @@ VALUES	('apple', 'apple.jpg', 'fruit'),
 		('onion','onion.jpg', 'vegatable'),
 		('potato','potato.jpg', 'vegatable'),
 		('spinach','spinach.jpg', 'vegatable');
+
+INSERT INTO useritems (UserId, ProductId)
+VALUES	('1', '2'),
+		('1', '5');

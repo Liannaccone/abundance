@@ -1,14 +1,6 @@
 
 module.exports = function(sequelize, Sequelize) {
 	var Useritem = sequelize.define('Useritem', {
-		name: {
-			type: Sequelize.STRING,
-			allowNull: false
-		},
-		category: {
-			type: Sequelize.STRING,
-			allowNull: false
-		}
 	});
 	Useritem.associate = function(models) {
 		// all items belong to a specific User
@@ -18,6 +10,12 @@ module.exports = function(sequelize, Sequelize) {
 				allowNull: false
 			}
 		});
+		Useritem.belongsTo(models.Product, {
+			foreignKey: {
+				allowNull: false
+			}
+		});
 	};
+
 	return Useritem;
 }
