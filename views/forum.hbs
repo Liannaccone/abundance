@@ -43,7 +43,73 @@
             <div class="col-md-3">
             </div>
             <div class="col-md-5">
-                <button type="button" class="btn btn-outline-danger">My Feed</button>
+                <button type="button" class="btn btn-outline-danger" id="btn-post" data-toggle="modal" data-target="#myModal">Post</button>
+                <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog">
+                        <!-- Modal content-->
+                        <div class="modal-content" id="test">
+                            <div class="modal-header">
+                                <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+                                <h4 class="modal-title">Post</h4>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="exampleFormControlTextarea1">Enter post here</label>
+                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" value="Submit" class="btn btn-outline-primary" id="submit-post">Submit</button>
+                                <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="myModal1" role="dialog">
+                    <div class="modal-dialog modal-lg">
+                        <!-- Modal content-->
+                        <div class="modal-content" id="test">
+                            <div class="modal-header">
+                                <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+                                <h4 class="modal-title">Comments</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="comments-container">
+                                    <div class="comments-row">
+                                        <div id="comments">
+                                            <p id="text">asefsadfasdfLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                                            <!-- Facebook like button. Using iframe  -->
+                                            <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&width=79&layout=button_count&action=like&size=small&show_faces=false&share=false&height=21&appId" width="79" height="21" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                                        </div>
+                                        <hr>
+                                        <div id="comments">
+                                            <p id="text">asefsadfasdfLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                                            <!-- Facebook like button. Using iframe  -->
+                                            <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&width=79&layout=button_count&action=like&size=small&show_faces=false&share=false&height=21&appId" width="79" height="21" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                                        </div>
+                                        <hr>
+                                        <div id="comments">
+                                            <p id="text">asefsadfasdfLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                                            <!-- Facebook like button. Using iframe  -->
+                                            <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&width=79&layout=button_count&action=like&size=small&show_faces=false&share=false&height=21&appId" width="79" height="21" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                                        </div>
+                                        <hr>
+                                        <div id="comments">
+                                            <p id="text">asefsadfasdfLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullam co laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                                            <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&width=79&layout=button_count&action=like&size=small&show_faces=false&share=false&height=21&appId" width="79" height="21" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                                        </div>
+                                        <hr>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <button type="button" class="btn btn-outline-danger">All Posts</button>
             </div>
             <div class="col-md-4">
@@ -54,19 +120,63 @@
             </div>
         </div>
     </div>
-    <div class="pic-container">
-        <div class="pic-row">
-            <p>asefsadfasdfLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+    <div class="post-container">
+        <div class="post-row">
+            <div id="post-div">
+                <p id="text">asefsadfasdfLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                <button type="button" class="btn btn-outline-danger" id="btn-reply" data-toggle="modal" data-target="#myModal">Reply</button>
+                <button type="button" class="btn btn-outline-danger" id="btn-post" data-toggle="modal" data-target="#myModal1">Comments</button>
+                <!-- Facebook like button. Using iframe  -->
+                <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&width=79&layout=button_count&action=like&size=small&show_faces=false&share=false&height=21&appId" width="79" height="21" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+            </div>
             <hr>
-            <p>asefsadfasdfLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+            <div id="post-div">
+                <p id="text">asefsadfasdfLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                <button type="button" class="btn btn-outline-danger" id="btn-reply" data-toggle="modal" data-target="#myModal">Reply</button>
+                <button type="button" class="btn btn-outline-danger" id="btn-post" data-toggle="modal" data-target="#myModal1">Comments</button>
+                <!-- Facebook like button. Using iframe  -->
+                <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&width=79&layout=button_count&action=like&size=small&show_faces=false&share=false&height=21&appId" width="79" height="21" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+            </div>
             <hr>
-            <p>asefsadfasdfLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+            <div id="post-div">
+                <p id="text">asefsadfasdfLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                <button type="button" class="btn btn-outline-danger" id="btn-reply" data-toggle="modal" data-target="#myModal">Reply</button>
+                <button type="button" class="btn btn-outline-danger" id="btn-post" data-toggle="modal" data-target="#myModal1">Comments</button>
+                <!-- Facebook like button. Using iframe  -->
+                <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&width=79&layout=button_count&action=like&size=small&show_faces=false&share=false&height=21&appId" width="79" height="21" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+            </div>
             <hr>
-            <p>asefsadfasdfLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+            <div id="post-div">
+                <p id="text">asefsadfasdfLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                <button type="button" class="btn btn-outline-danger" id="btn-reply" data-toggle="modal" data-target="#myModal">Reply</button>
+                <button type="button" class="btn btn-outline-danger" id="btn-p
+                ost" data-toggle="modal" data-target="#myModal1">Comments</button>
+                <!-- Facebook like button. Using iframe  -->
+                <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&width=79&layout=button_count&action=like&size=small&show_faces=false&share=false&height=21&appId" width="79" height="21" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+            </div>
             <hr>
         </div>
     </div>
+    <!-- <script type="text/javascript" src="app.js"></script> -->
+    <script>
+    $('#submit-post').on('click', function(event) {
+        event.preventDefault();
 
+        var input = $('#exampleFormControlTextarea1').val().trim();
+        console.log("iputis" + input);
+
+        console.log(input)
+        $('.form-control').val('');
+
+        $('#myModal').modal('hide');
+
+        return false;
+
+
+
+
+    });
+    </script>
 <footer class="footer">
         <span class="text-muted">&copy; Copyright Abundance</span>
 </footer>

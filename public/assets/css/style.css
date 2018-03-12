@@ -1,7 +1,7 @@
 
 
 .wrapper {
-	background: url(../images/orangesBG.gif) no-repeat top center fixed;
+	background: url(https://www.palmbay.com/sites/default/files/product/slide/2016-04/Wines-Portfolio-v1_smaller_0.gif) no-repeat top center fixed;
 	background-size: cover;
 	height: auto;
 	position: relative;
@@ -17,7 +17,7 @@
 }
 
 body, html {
-	font-family: 'Nanum Pen Script', cursive;
+	font-family: 'Timmana', sans-serif;
 	background-color: #c3bd91;
 }
 
@@ -50,7 +50,7 @@ body, html {
 }
 
 h1 {
-	margin-top: 10%;
+	margin-top: 35%;
 	color: #94a9b2;
 	font-size: 110px;
 	text-align: center;
@@ -92,12 +92,13 @@ h4 {
 
 .about_us {
 	margin-top: 20%;
+	margin-left: -15px;
+	margin-right: -15px;
 	text-align: center;
 	background-color: #c3bd91;
 	padding: 3%;
 	background: linear-gradient(0deg, #c3bd91, transparent),
 				linear-gradient(180deg, #c3bd91, transparent);
-	padding: 10%;
 }
 
 /*DASH STYLING*/
@@ -115,14 +116,9 @@ h4 {
 	padding: 10%;
 }
 
-
+/*==============================================*/
 /*Forum Styling*/
-/*body {
-    background-image: url("4.jpeg");
-  position: relative;
-}*/
-
-
+/*==============================================*/
 .navbar {
     margin-bottom: 1%;
     opacity: .8;
@@ -145,29 +141,48 @@ h4 {
 	opacity: .9;
 }
 
-p{
-	color: #401d0a;
+#text{
+	
+	color: black;
 	font-family: 'Poiret One', cursive;
 	font-weight: bolder;
 	font-size: 18px;
+  margin: 0;
 }
 
 
-.pic-container {
+.post-container {
   width: 1000px;
   margin: 0 auto;
   overflow-y: scroll;
-  background-color: #c3bd91;
-  opacity: .3;
+  background-color: lightblue;
+  opacity: .9;
   border-radius: 20px;
 }
 
-.pic-row {
- 
+.post-row {
   width: 960px;
   height: 500px;
   overflow: auto;
 }
+
+.comments-container {
+  width: 750px;
+  margin: 0 auto;
+  overflow-y: scroll;
+  background-color: lightblue;
+  opacity: .9;
+  border-radius: 20px;
+}
+
+.comments-row {
+  
+  width: 700px;
+  height: 500px;
+  overflow: auto;
+}
+
+
 
 .container{
 	margin-bottom: 2%;
@@ -175,11 +190,29 @@ p{
 
 hr{
 	height: 20px;
-	color: #c3bd91;
-	background-color: #c3bd91;
+	color: black;
+	background-color: black;
+  margin-left: 10px;
 
 }
+#post-div{
+  margin: 15px;
+}
 
+.modal-dialog{
+  widows: 1000px;
+  margin: -500;
+}
+
+#comments{
+  margin: 10px;
+}
+
+
+iframe{
+  float: right;
+}
+/*====================================*/
 /*@import "compass/css3";
 @import url(https://fonts.googleapis.com/css?family=Give+You+Glory);*/
 /*==============================*/
