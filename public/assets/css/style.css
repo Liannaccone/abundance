@@ -17,8 +17,8 @@
 }
 
 body, html {
-	font-family: 'Timmana', sans-serif;
-	background-color: #c3bd91;
+	font-family: 'Rancho', cursive;
+	background-color: lightblue;
 }
 
 .modal-backdrop {
@@ -31,9 +31,9 @@ body, html {
 
 .footer {
 	width: 100%;
-	background-color: #c3bd91;
+	background-color: lightblue;
 	text-align: center;
-	margin-top: 23%;
+	margin-top: 20%;
 	margin-bottom: 0;
 	font-size: 18px;
 	height: 22px;
@@ -42,7 +42,7 @@ body, html {
 
 .login_signup_panel {
 	margin-top: 75%;
-	background-color: #c3bd91;
+	background-color: lightblue;
 	opacity: .8;
 	border-radius: 200px;
 	padding: 10%;
@@ -50,8 +50,8 @@ body, html {
 }
 
 h1 {
-	margin-top: 35%;
-	color: #94a9b2;
+	margin-top: 2%;
+	color: green;
 	font-size: 110px;
 	text-align: center;
 	text-shadow:
@@ -78,11 +78,19 @@ h4 {
 	margin-bottom: 10%;
 }
 
+h5 {
+  font-size: 45px;
+  clear: both;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 .logoContainer {
-	background-color: #c3bd91;
+/*	background-color: lightblue;
 	border-radius: 200%;
 	opacity: .8;
-	padding: .2%;
+	padding: .2%;*/
 	text-align: center;
 }
 
@@ -91,14 +99,19 @@ h4 {
 }
 
 .about_us {
-	margin-top: 20%;
+	margin-top: 25%;
 	margin-left: -15px;
 	margin-right: -15px;
 	text-align: center;
-	background-color: #c3bd91;
+	background-color: lightblue;
 	padding: 3%;
-	background: linear-gradient(0deg, #c3bd91, transparent),
-				linear-gradient(180deg, #c3bd91, transparent);
+	background: linear-gradient(0deg, lightblue, transparent),
+				linear-gradient(180deg, lightblue, transparent);
+}
+
+#signupSheet {
+  margin-top: 20%;
+  max-width: 100%;
 }
 
 /*DASH STYLING*/
@@ -110,10 +123,54 @@ h4 {
 }
 
 #offering_panel, #community_items_panel {
-	background-color: #c3bd91;
+	background-color: lightblue;
 	margin-top: 10%;
 	text-align: center;
 	padding: 10%;
+}
+
+.thumbnail {
+    position:relative;
+    overflow:hidden;
+    margin-bottom: 5px;
+    height: 150px;
+    float: left;
+    width: 23.7%; 
+    margin: 5px;
+}
+.thumbnail img {
+	max-width: 100%;
+	height: auto;
+	min-height: 100%;
+} 
+.caption {
+    position:absolute;
+    top:0;
+    right:0;
+    background:rgba(90, 90, 90, 0.75);
+    width:100%;
+    max-height:100%;
+    padding:2%;
+    display: none;
+    text-align: left;
+    color:#fff !important;
+    z-index:2;
+}
+
+.modal-body:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#test {
+	background-color: white
+}
+
+#test:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 /*==============================================*/
@@ -208,6 +265,7 @@ hr{
 #comments{
   margin: 10px;
 }
+
 
 
 iframe{
