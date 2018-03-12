@@ -140,7 +140,7 @@ h4 {
 /*==============================================*/
 .navbar {
     margin-bottom: 1%;
-    opacity: .8;
+    opacity: .4;
 }
 
 #title {
@@ -166,7 +166,7 @@ h4 {
 	font-family: 'Poiret One', cursive;
 	font-weight: bolder;
 	font-size: 18px;
-  margin: 0;
+  	margin: 0;
 }
 
 
@@ -181,7 +181,7 @@ h4 {
 
 .post-row {
   width: 960px;
-  height: 500px;
+  height: 700px;
   overflow: auto;
 }
 
@@ -208,10 +208,11 @@ h4 {
 }
 
 hr{
-	height: 20px;
+	height: 1px;
 	color: black;
 	background-color: black;
-  margin-left: 10px;
+  	margin-left: 10px;
+  	opacity: .4;
 
 }
 #post-div{
