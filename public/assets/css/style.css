@@ -21,6 +21,10 @@ body, html {
 	background-color: #c3bd91;
 }
 
+.modal-backdrop {
+  z-index: -1;
+}
+
 .row {
 	margin:0 !important;
 }
