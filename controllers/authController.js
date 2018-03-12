@@ -49,13 +49,13 @@ var db = require("../models");
   // ================
 
   exports.addUserItem = function(req, res) {
-        console.log("\nhello!!!!\n", req.user)
-        // db.useritem.create([
-        //     'product_id', 'userId'
-        //     ], [
-        //     req.body.product_id, req.user
-        //     ], function(data)  {
-        //     alert('ot worked!')
-        //     // res.json(dbItem);
-        // });
+        var reqUser = req.session.passport.user;
+        var reqProduct = req.body.product_id;
+
+        db.Useritem.create({
+          ProductId: reqProduct,
+          userId: reqUser
+          }).then(function(data)  {
+            console.log('New user item added')
+          });
   }
