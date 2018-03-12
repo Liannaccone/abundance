@@ -6,7 +6,7 @@ module.exports = function(sequelize, Sequelize) {
 	Useritem.associate = function(models) {
 		// all items belong to a specific User
 		// adding foreign key constraint so an Item cannot be created without a User
-		Useritem.belongsTo(models.User, {
+		Useritem.belongsTo(models.user, {
 			foreignKey: {
 				allowNull: false
 			}

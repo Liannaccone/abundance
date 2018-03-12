@@ -43,3 +43,19 @@ var db = require("../models");
           res.redirect('/');
       });
   }
+
+  // ================
+  // api routes
+  // ================
+
+  exports.addUserItem = function(req, res) {
+        console.log("\nhello!!!!\n", req.user)
+        // db.useritem.create([
+        //     'product_id', 'userId'
+        //     ], [
+        //     req.body.product_id, req.user
+        //     ], function(data)  {
+        //     alert('ot worked!')
+        //     // res.json(dbItem);
+        // });
+  }

@@ -6,7 +6,7 @@ module.exports = function(passport, user) {
  
  
     // var User = user;
-    var User  = require('../../models').User;
+    var User  = require('../../models').user;
  
     var LocalStrategy = require('passport-local').Strategy;
 
