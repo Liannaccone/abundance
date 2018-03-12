@@ -17,8 +17,8 @@
 }
 
 body, html {
-	font-family: 'Timmana', sans-serif;
-	background-color: #c3bd91;
+	font-family: 'Rancho', cursive;
+	background-color: lightblue;
 }
 
 .modal-backdrop {
@@ -31,7 +31,7 @@ body, html {
 
 .footer {
 	width: 100%;
-	background-color: #c3bd91;
+	background-color: lightblue;
 	text-align: center;
 	margin-top: 23%;
 	margin-bottom: 0;
@@ -42,7 +42,7 @@ body, html {
 
 .login_signup_panel {
 	margin-top: 75%;
-	background-color: #c3bd91;
+	background-color: lightblue;
 	opacity: .8;
 	border-radius: 200px;
 	padding: 10%;
@@ -50,8 +50,8 @@ body, html {
 }
 
 h1 {
-	margin-top: 35%;
-	color: #94a9b2;
+	margin-top: 2%;
+	color: green;
 	font-size: 110px;
 	text-align: center;
 	text-shadow:
@@ -79,10 +79,10 @@ h4 {
 }
 
 .logoContainer {
-	background-color: #c3bd91;
+/*	background-color: lightblue;
 	border-radius: 200%;
 	opacity: .8;
-	padding: .2%;
+	padding: .2%;*/
 	text-align: center;
 }
 
@@ -95,10 +95,10 @@ h4 {
 	margin-left: -15px;
 	margin-right: -15px;
 	text-align: center;
-	background-color: #c3bd91;
+	background-color: lightblue;
 	padding: 3%;
-	background: linear-gradient(0deg, #c3bd91, transparent),
-				linear-gradient(180deg, #c3bd91, transparent);
+	background: linear-gradient(0deg, lightblue, transparent),
+				linear-gradient(180deg, lightblue, transparent);
 }
 
 /*DASH STYLING*/
@@ -110,7 +110,7 @@ h4 {
 }
 
 #offering_panel, #community_items_panel {
-	background-color: #c3bd91;
+	background-color: lightblue;
 	margin-top: 10%;
 	text-align: center;
 	padding: 10%;
