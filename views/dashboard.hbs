@@ -79,16 +79,20 @@
 </div>
 <div class="row">
     <div class="col-md-12" id="offering_panel">
-        <h1>Your Offering</h1>
+        <h1>What's abundant in your garden?</h1>
         <div class="row">
             <div class="col-md-6" id="offering_scroll">
-                <p>####ADD THUMBNAILS HERE####</p>
+                <div>
+                    {{#each useritem}}
+                        {{>items/useritem-block}}
+                    {{/each}}
+                </div>
             </div>
             <div class="col-md-6">
                 <h3>Add Your Items Here</h3>
                 <button class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Add</button>
                 <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-lg">
+                    <div class="modal-dialog modal-lg" id='test'>
                         <div class="modal-header">
                             <h5 class="modal-title">Add your produce here:</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -96,13 +100,12 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <nav class="navbar navbar-light bg-light">
-                                <form class="form-inline">
-                                    <input class="form-control mr-sm-2" type="search" placeholder="Search for items here" aria-label="Search">
-                                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                                </form>
-                            </nav>
-                            <p>####THUMBNAILS OF PRODUCE TO ADD####</p>
+                            <nav class="navbar navbar-light bg-light"></nav>
+                            <div>
+                                {{#each product}}
+                                    {{>items/product-block}}
+                                {{/each}}
+                            </div>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-primary">Save</button>
@@ -119,7 +122,10 @@
     <div class="col-md-12" id="community_items_panel">
         <h1>Community Marketplace</h1>
         <div class="row">
-            <div class="col-md-12" id="community_items_scroll">####THUMBNAILS OF COMMUNITY ITEMS####
+            <div>
+                {{#each communityitem}}
+                    {{>items/communityitem-block}}
+                {{/each}}
             </div>
         </div>
     </div>

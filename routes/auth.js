@@ -1,5 +1,5 @@
 var authController = require('../controllers/authcontroller.js');
- 
+ var db = require("../models");
  
 module.exports = function(app, passport) {
  
@@ -37,7 +37,10 @@ module.exports = function(app, passport) {
         }
  
     ));
- 
+
+    app.post('/api/useritem', isLoggedIn, authController.addUserItem);
+
+    app.delete('/api/useritem', isLoggedIn, authController.removeUserItem);
 
     function isLoggedIn(req, res, next) {
         if (req.isAuthenticated())
