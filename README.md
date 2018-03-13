@@ -21,6 +21,10 @@ Abundant is your solution for helping your neighbors elimate food waste in the B
 
 ![forum](/public/assets/images/screenshots/forum.png)
 
+## Our Code
+
+
+
 ## Deployment
 
 Deployed with Heroku: *****INSERT DEPLOYED LINK*****
