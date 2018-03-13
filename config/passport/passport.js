@@ -179,12 +179,8 @@ passport.use('local-signin', new LocalStrategy(
             return done(null, false, {
                 message: 'Something went wrong with your Signin'
             });
- 
         });
- 
- 
     }
- 
 ));
 
 
