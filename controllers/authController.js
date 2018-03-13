@@ -31,22 +31,17 @@ var db = require("../models");
     db.Useritem.findAll({
       userId: reqUser
     }).then(function(data) {
-      if(!data) {
-        next();
-      }
-      else{
         // console.log('\n*****\n', data[0]['dataValues'].name)
         hbsObject.useritem = [];
         for (i = 0; i < data.length; i++) {
-          var newProduct = {
+          var newUserItem  = {
             id: data[i]['dataValues'].id,
             name: data[i]['dataValues'].name
           }
-          hbsObject.product.push(newProduct)
+          hbsObject.useritem.push(newUserItem)
         }
-      }
-            res.render('dashboard', hbsObject)
-    });
+      res.render('dashboard', hbsObject)
+    })
     // // queries db for all user items where userID is not reqUser
     // db.Useritem.findAll({
     //   where: {
