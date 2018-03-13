@@ -16,6 +16,10 @@
 	width: 100%;
 }
 
+#exampleModalLong {
+  z-index: -1;
+}
+
 body, html {
 	font-family: 'Rancho', cursive;
 	background-color: lightgrey;
@@ -162,7 +166,15 @@ p {
   margin-top: 4%;
 }
 
-#offering_panel, #community_items_panel {
+#offering_panel {
+  background-color: lightgrey;
+  margin-top: 10%;
+  text-align: center;
+  padding: 5%;
+  opacity: .8;
+}
+
+#community_items_panel {
 	background-color: lightgrey;
 	margin-top: 10%;
 	text-align: center;

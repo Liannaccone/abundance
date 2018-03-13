@@ -1,10 +1,10 @@
 <div class="wrapper">
-<div class="row">
-    <div class="col-md-12">
-        <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+    <!-- <div class="row"> -->
+        <!-- <div class="col-md-12"> -->
+            <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
                         <a class="nav-link" href="/dashboard" style="font-size: 24px; color: black">Dashboard<span class="sr-only">(current)</span></a>
@@ -17,9 +17,9 @@
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong" style="margin-right: 5px">
                     Settings
                 </button>
-                <button type="button" class="btn btn-primary">Logout</button>
+                <a href="/logout" type="button" class="btn btn-primary" style="color: purple">Logout</a>
                 <!-- Modal -->
-                <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                <div class="modal fade" id="exampleModalLong" tabindex="99999" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -59,74 +59,65 @@
                                         <label for="zip">Zip</label>
                                         <input type="input" class="form-control" id="InputZip1" placeholder="Update Zip">
                                     </div>
-                                    
-                                    <button type="submit" class="btn btn-primary">Submit Changes</button>
+                                    <button type="submit" class="btn btn-primary btn">Submit Changes</button>
                                 </form>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel changes</button>
+                                <button type="button" class="btn btn-primary btn" data-dismiss="modal">Cancel changes</button>
                             </div>
                         </div>
                     </div>
                 </div>
-        </nav>
+            </nav>
+       <!--  </div>
+    </div> -->
+    <div class="row">
+        <div class="col-md-12" id="offering_panel">
+            <h1>What's abundant in your garden?</h1>
+            <div class="row">
+                <div class="col-md-6" id="offering_scroll">
+                    <div>
+                        {{#each useritem}} {{>items/useritem-block}} {{/each}}
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h3>Add Your Items Here</h3>
+                    <button class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Add</button>
+                    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg" id='test'>
+                            <div class="modal-header">
+                                <h5 class="modal-title">Add your produce here:</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <nav class="navbar navbar-light bg-light"></nav>
+                                <div>
+                                    {{#each product}} {{>items/product-block}} {{/each}}
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary btn">Save</button>
+                                <button type="button" class="btn btn-primary btn" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
-<div class="row">
-    <div class="col-md-12" id="offering_panel">
-        <h1>What's abundant in your garden?</h1>
-        <div class="row">
-            <div class="col-md-6" id="offering_scroll">
+    <div class="row">
+        <div class="col-md-12" id="community_items_panel">
+            <h1>Community Marketplace</h1>
+            <div class="row">
                 <div>
-                    {{#each useritem}}
-                        {{>items/useritem-block}}
-                    {{/each}}
-                </div>
-            </div>
-            <div class="col-md-6">
-                <h3>Add Your Items Here</h3>
-                <button class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Add</button>
-                <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-lg" id='test'>
-                        <div class="modal-header">
-                            <h5 class="modal-title">Add your produce here:</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <nav class="navbar navbar-light bg-light"></nav>
-                            <div>
-                                {{#each product}}
-                                    {{>items/product-block}}
-                                {{/each}}
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-primary">Save</button>
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        </div>
-                    </div>
+                    {{#each communityitem}} {{>items/communityitem-block}} {{/each}}
                 </div>
             </div>
         </div>
     </div>
-</div>
-
-<div class="row">
-    <div class="col-md-12" id="community_items_panel">
-        <h1>Community Marketplace</h1>
-        <div class="row">
-            <div>
-                {{#each communityitem}}
-                    {{>items/communityitem-block}}
-                {{/each}}
-            </div>
-        </div>
-    </div>
-</div>
-
-<footer class="footer">
+    <footer class="footer">
         <span class="footer-text">&copy; Copyright Abundance</span>
-</footer>
+    </footer>
 </div>
