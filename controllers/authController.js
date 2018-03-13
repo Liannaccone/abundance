@@ -28,7 +28,9 @@ var db = require("../models");
     });
     // queries db for all user items where userID is reqUser
     db.Useritem.findAll({
-      userId: reqUser
+      where: {
+        userId: reqUser
+      }
     }).then(function(data) {
         // console.log('\n*****\n', data[0]['dataValues'].name)
         hbsObject.useritem = [];
@@ -66,7 +68,7 @@ var db = require("../models");
     // var hbsObject = {}
     // db.Post.findAll({}).then(function(data){
     //   dbsObject.post = data
-    //   res.render('forum', hbsObject);
+      res.render('forum');
     // })
   }
 
