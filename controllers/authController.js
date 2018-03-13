@@ -66,7 +66,7 @@ var db = require("../models");
     // var hbsObject = {}
     // db.Post.findAll({}).then(function(data){
     //   dbsObject.post = data
-    //   res.render('forum', hbsObject);
+      res.render('forum');
     // })
   }
 
