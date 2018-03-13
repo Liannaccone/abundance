@@ -2,6 +2,7 @@
 
 Abundant is your solution for helping your neighbors elimate food waste in the Bay Area. The idea is simple. You have extra limes growing in your backyard. Your neighbors have an abundance of tomatoes this year. Instead of going to the market down the street to buy produce, you can instead connect with your neighbor and exchange your extra produce that would otherwise go to waste!
 
+
 ## Getting Started
 
 ### When you first visit Abundant, click the "signup" button located on the homepage. 
@@ -39,7 +40,8 @@ Abundant is your solution for helping your neighbors elimate food waste in the B
 
 ## Deployment
 
-Deployed with Heroku: *****INSERT DEPLOYED LINK*****
+Deployed with Heroku: https://abundance-app.herokuapp.com/
+
 
 ## Built With
 
@@ -60,15 +62,18 @@ Deployed with Heroku: *****INSERT DEPLOYED LINK*****
 * [passport-local](https://www.npmjs.com/package/passport-local) - Passport strategy for authenticating with a username and password. This module lets you authenticate using a username and password in your Node.js applications. By plugging into Passport, local authentication can be easily and unobtrusively integrated into any application or framework that supports Connect-style middleware, including Express.
 * [sequelize](https://www.npmjs.com/package/sequelize) - Sequelize is a promise-based Node.js ORM for Postgres, MySQL, SQLite and Microsoft SQL Server. It features solid transaction support, relations, read replication and more.
 
+
 ## Authors
 * Javier Latorre Ibanez (https://github.com/Torrespain)
 * Jordan Ketring (https://github.com/jketring6)
 * Luke Iannaccone (https://github.com/Liannaccone)
 * Robinson Garcia (https://github.com/rgarcia051411)
 
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
 
 ## Acknowledgments
 
