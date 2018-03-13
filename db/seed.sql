@@ -31,7 +31,3 @@ VALUES	('apple', 'apple.jpg', 'fruit'),
 		('onion','onion.jpg', 'vegatable'),
 		('potato','potato.jpg', 'vegatable'),
 		('spinach','spinach.jpg', 'vegatable');
-
-INSERT INTO useritems (UserId, ProductId)
-VALUES	('1', '2'),
-		('1', '5');
