@@ -1,7 +1,10 @@
  <div id="comments" data-id='{{id}}'>
 	<h3>{{postTitle}}</h3>
-     <p id="text">{{postBody}}</p>
+    <p id="text">{{postBody}}</p>
+ 	<button type="button" class="btn btn-primary" id="btn-reply" data-toggle="modal" data-target="#myModal">Reply</button>
+    <button type="button" class="btn btn-primary" id="btn-post" data-toggle="modal" data-target="#myModal1">Comments</button>
      <!-- Facebook like button. Using iframe  -->
      <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&width=79&layout=button_count&action=like&size=small&show_faces=false&share=false&height=21&appId" width="79" height="21" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
  </div>
  <hr>
+
