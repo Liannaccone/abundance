@@ -194,12 +194,16 @@ p {
     float: left;
     width: 23.7%; 
     margin: 5px;
+    opacity: none !important;
 }
+
 .thumbnail img {
 	max-width: 100%;
 	height: auto;
 	min-height: 100%;
+  opacity: none !important;
 } 
+
 .caption {
     position:absolute;
     top:0;
@@ -229,6 +233,12 @@ p {
   display: table;
   clear: both;
 }
+
+.add-button, .remove-button {
+  margin-bottom: 10px;
+}
+
+
 
 /*==============================================*/
 /*Forum Styling*/
