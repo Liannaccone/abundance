@@ -1,32 +1,30 @@
 <div class="wrapper">
     <div class="row">
-        <div class="col-md-4" id="signupSheet">
+        <div class="col-md-8" id="signupSheet">
+            <h4>Please Enter Your Information:</h4>
             <form id="signup" name="signup" method="post" action="/signup">
-                <label for="email" style="font-size: 45px">Email Address</label>
+                <label for="email" style="font-size: 45px" >Email Address</label>
+                <label for="password" style="font-size: 45px; text-indent: 125px">Password</label>
                 <br>
-                <input class="text" name="email" type="email" />
+                <input class="text" name="email" type="email" class="inputBoxie" />
+                <input name="password" type="password" class="inputBoxie" />
+                <br>
+                <br>
                 <br>
                 <label for="firstname" style="font-size: 45px">Firstname</label>
+                <label for="lastname" style="font-size: 45px; text-indent: 205px"">Lastname</label>
                 <br>
-                <input name="firstname" type="text" />
+                <input name="firstname" type="text" class="inputBoxie" />
+                <input name="lastname" type="text" class="inputBoxie" />
                 <br>
-                <label for="lastname" style="font-size: 45px">Lastname</label>
                 <br>
-                <input name="lastname" type="text" />
-                <br>
-                <label for="password" style="font-size: 45px">Password</label>
-                <br>
-                <input name="password" type="password" />
-                <br>
-                <input class="btn" type="submit" value="Sign Up" />
-                <br>
-                <a href="/signin" class="btn btn-primary btn-lg" role="button" style="float: left">Cancel</a>
+                <input class="btn" type="submit" value="Sign Up" style="float: left; text-indent: 308px; margin-right: 5px; text-align: center" />
+                <a href="/signin" class="btn btn-primary btn" role="button" style="text-indent: 308px; text-align: center; width: 400px" >Cancel</a>
             </form>
         </div>
         <div class="col-md-4"></div>
-        <div class="col-md-4"></div>
     </div>
-    <footer class="footer">
+    <footer class="footer" style="margin-top: 8.5%">
         <span class="text-muted">&copy; Copyright Abundance</span>
     </footer>
 </div>
