@@ -1,15 +1,15 @@
-var authController = require('../controllers/authcontroller.js');
+var controller = require('../controllers/controller.js');
  var db = require("../models");
  
 module.exports = function(app, passport) {
  
-    app.get('/', authController.signin);
+    app.get('/', controller.signin);
 
  
-    app.get('/signup', authController.signup);
+    app.get('/signup', controller.signup);
  
  
-    app.get('/signin', authController.signin);
+    app.get('/signin', controller.signin);
  
  
     app.post('/signup', passport.authenticate('local-signup', {
@@ -21,13 +21,13 @@ module.exports = function(app, passport) {
     ));
  
  
-    app.get('/dashboard', isLoggedIn, authController.dashboard);
+    app.get('/dashboard', isLoggedIn, controller.dashboard);
 
-    app.get('/forum', isLoggedIn, authController.forum);
+    app.get('/forum', isLoggedIn, controller.forum);
 
-    app.post('/post', isLoggedIn, authController.createPost);
+    app.post('/post', isLoggedIn, controller.createPost);
  
-    app.get('/logout', authController.logout);
+    app.get('/logout', controller.logout);
  
  
     app.post('/signin', passport.authenticate('local-signin', {
@@ -38,9 +38,9 @@ module.exports = function(app, passport) {
  
     ));
 
-    app.post('/api/useritem', isLoggedIn, authController.addUserItem);
+    app.post('/api/useritem', isLoggedIn, controller.addUserItem);
 
-    app.delete('/api/useritem', isLoggedIn, authController.removeUserItem);
+    app.delete('/api/useritem', isLoggedIn, controller.removeUserItem);
 
     function isLoggedIn(req, res, next) {
         if (req.isAuthenticated())
