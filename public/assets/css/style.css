@@ -200,7 +200,7 @@ p {
 .thumbnail img {
 	max-width: 100%;
 	height: auto;
-	min-height: 100%;
+	max-height: 100%;
   opacity: none !important;
 } 
 
