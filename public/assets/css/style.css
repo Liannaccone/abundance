@@ -18,11 +18,15 @@
 
 body, html {
 	font-family: 'Rancho', cursive;
-	background-color: lightblue;
+	background-color: lightgrey;
 }
 
 .modal-backdrop {
   z-index: -1;
+}
+
+.btn, .btn-primary {
+  background-color: purple;
 }
 
 .row {
@@ -31,18 +35,22 @@ body, html {
 
 .footer {
 	width: 100%;
-	background-color: lightblue;
+	background-color: lightgrey;
 	text-align: center;
 	margin-top: 20%;
 	margin-bottom: 0;
 	font-size: 18px;
 	height: 22px;
 }
+
+.footer-text {
+  color: purple;
+}
 /*LOGIN STYLING*/
 
 .login_signup_panel {
 	margin-top: 75%;
-	background-color: lightblue;
+	background-color: lightgrey;
 	opacity: .8;
 	border-radius: 200px;
 	padding: 10%;
@@ -61,7 +69,7 @@ h1 {
 }
 
 h2 {
-	color: #94a9b2;
+	color: purple;
 	font-size: 90px;
 	text-align: center;
 	text-shadow:
@@ -75,6 +83,7 @@ h4 {
 	font-size: 60px;
 	margin-top: 10%;
 	margin-bottom: 10%;
+  color: purple;
 }
 
 h5 {
@@ -83,10 +92,11 @@ h5 {
   display: inline-block;
   overflow: hidden;
   white-space: nowrap;
+  color: purple;
 }
 
 .logoContainer {
-/*	background-color: lightblue;
+/*	background-color: darkblu;
 	border-radius: 200%;
 	opacity: .8;
 	padding: .2%;*/
@@ -102,10 +112,18 @@ h5 {
 	margin-left: -15px;
 	margin-right: -15px;
 	text-align: center;
-	background-color: lightblue;
-	padding: 3%;
-	background: linear-gradient(0deg, lightblue, transparent),
-				linear-gradient(180deg, lightblue, transparent);
+	background-color: lightgrey;
+	padding: 7%;
+  padding-bottom: 0px;
+	background: linear-gradient(0deg, lightgrey
+ , transparent),
+				linear-gradient(180deg, lightgrey
+       , transparent);
+}
+
+p {
+  color: black;
+  font-size: 28px;
 }
 
 
@@ -144,7 +162,7 @@ h5 {
 }
 
 #offering_panel, #community_items_panel {
-	background-color: lightblue;
+	background-color: lightgrey;
 	margin-top: 10%;
 	text-align: center;
 	padding: 5%;
@@ -239,7 +257,7 @@ h5 {
   width: 1000px;
   margin: 0 auto;
   overflow-y: scroll;
-  background-color: lightblue;
+  background-color: lightgrey;
   opacity: .9;
   border-radius: 20px;
 }
@@ -254,7 +272,7 @@ h5 {
   width: 750px;
   margin: 0 auto;
   overflow-y: scroll;
-  background-color: lightblue;
+  background-color: lightgrey;
   opacity: .9;
   border-radius: 20px;
 }
