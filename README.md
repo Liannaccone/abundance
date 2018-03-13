@@ -21,8 +21,8 @@ Abundant is your solution for helping your neighbors elimate food waste in the B
 
 ![forum](/public/assets/images/screenshots/forum.png)
 
-## Code Samples
 
+## Code Samples
 
 ### Get & Post Methods + Redirect Used
 ![get-post methods](/public/assets/images/screenshots/Capture1.JPG)
@@ -35,6 +35,7 @@ Abundant is your solution for helping your neighbors elimate food waste in the B
 
 ### Displaying User and Community Items
 ![Displaying Items](/public/assets/images/screenshots/Capture3.JPG)
+
 
 ## Deployment
 
