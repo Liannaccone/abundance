@@ -23,9 +23,9 @@ module.exports = function(app, passport) {
  
     app.get('/dashboard', isLoggedIn, authController.dashboard);
 
-    app.get('/forum', authController.forum);
- 
- 
+    app.get('/forum', isLoggedIn, authController.forum);
+
+    app.post('/post', isLoggedIn, authController.createPost);
  
     app.get('/logout', authController.logout);
  

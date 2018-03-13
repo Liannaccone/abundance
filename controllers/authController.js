@@ -65,12 +65,21 @@ var db = require("../models");
   }
 
   exports.forum = function(req, res) {
-    // var hbsObject = {}
-    // db.Post.findAll({}).then(function(data){
-    //   dbsObject.post = data
-      res.render('forum');
-    // })
+    var reqUser = req.session.passport.user;
+    var hbsObject = {}
+    db.Post.findAll({}).then(function(data){
+      hbsObject.post = [];
+      for(i = 0; i < data.length; i++) {
+        var newPost = {
+          postTitle: data[i]['dataValues'].title,
+          postBody: data[i]['dataValues'].body
+        }
+        hbsObject.post.push(newPost)
+      }
+      res.render('forum', hbsObject);
+    })
   }
+
 
   exports.logout = function(req, res) {
       req.session.destroy(function(err) {
@@ -104,5 +113,17 @@ var db = require("../models");
       }
     }).then(function() {
       console.log('Successfully deleted entry')
+    })
+  }
+
+  exports.createPost = function(req, res) {
+    var reqUser = req.session.passport.user;
+    console.log('\n**** user:',reqUser, '\n***', req.body)
+    db.Post.create({
+        title: req.body.userTitle,
+        body: req.body.userBody,
+        userId: reqUser
+    }).then(function(data){
+      console.log('New post added!')
     })
   }
