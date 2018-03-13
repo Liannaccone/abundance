@@ -1,14 +1,24 @@
 var exports = module.exports = {}
 var db = require("../models");
 
-  exports.signup = function(req, res) {
-      res.render('signup');
-  }
+// ====================================
+//        ROUTES TO RENDER VIEWS
+// ====================================
 
+
+  // user sign in/landing page
   exports.signin = function(req, res) {
       res.render('signin');
   }
 
+
+  // user sign up
+  exports.signup = function(req, res) {
+      res.render('signup');
+  }
+
+
+  // renders user-specific dashboard
   exports.dashboard = function(req, res) {
     var reqUser = req.session.passport.user;
     var hbsObject = {};
@@ -32,7 +42,6 @@ var db = require("../models");
         userId: reqUser
       }
     }).then(function(data) {
-        // console.log('\n*****\n', data[0]['dataValues'].name)
         hbsObject.useritem = [];
         for (i = 0; i < data.length; i++) {
           var newUserItem  = {
@@ -64,6 +73,8 @@ var db = require("../models");
     })
   }
 
+
+  // renders forum page
   exports.forum = function(req, res) {
     var reqUser = req.session.passport.user;
     var hbsObject = {}
@@ -81,16 +92,20 @@ var db = require("../models");
   }
 
 
+  // ends the user's session
   exports.logout = function(req, res) {
       req.session.destroy(function(err) {
           res.redirect('/');
       });
   }
 
-  // ================
-  // api routes
-  // ================
 
+// ====================================
+//            API ROUTES
+// ====================================
+
+
+  // adds a user item to the database
   exports.addUserItem = function(req, res) {
         var reqUser = req.session.passport.user;
         var reqProduct = req.body.product_id;
@@ -105,6 +120,8 @@ var db = require("../models");
           });
   }
 
+
+  // removes a user item from the database
   exports.removeUserItem = function(req, res){
     var reqId = req.body.id
     db.Useritem.destroy({
@@ -116,6 +133,8 @@ var db = require("../models");
     })
   }
 
+
+  // creates a post in the database
   exports.createPost = function(req, res) {
     var reqUser = req.session.passport.user;
     console.log('\n**** user:',reqUser, '\n***', req.body)
