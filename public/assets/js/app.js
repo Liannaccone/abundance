@@ -1,11 +1,12 @@
 $(document).ready(function(){
 	
+	// stores values of the corresponding item and initiates an ajax call to post the new item...
 	$('.add-button').on('click', function(event) {
 		var newProduct = {
 			product_id: $(this).data('id'),
 			product_name: $(this).data('name')
 		}
-		// ajax call to /api/useritem' method='post'>
+		
 	    $.ajax("/api/useritem", {
 	      type: "POST",
 	      data: newProduct
@@ -17,7 +18,8 @@ $(document).ready(function(){
 	      }
 	    );
 	});
-
+	
+	// stores values of the corresponding item and initiates an ajax call to delete it from the database...
 	$('.remove-button').on('click', function(event) {
 		var condition = {
 			id: $(this).data('id')
@@ -32,8 +34,8 @@ $(document).ready(function(){
 		})
 	})
 
+	// toggles the detail of each thumbnail with 'add' or 'remove' links...
     $("[rel='tooltip']").tooltip();    
- 
     $('.thumbnail').hover(
         function(){
             $(this).find('.caption').toggle();
