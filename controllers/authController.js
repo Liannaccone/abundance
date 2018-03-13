@@ -27,38 +27,39 @@ var db = require("../models");
       // console.log(hbsObject.product)
     });
     // queries db for all user items where userID is reqUser
-    // need to also get item_name and img url out of this, join to product table?
     db.Useritem.findAll({
       userId: reqUser
     }).then(function(data) {
-      if(!data) {
-        next();
-      }
-      else{
         // console.log('\n*****\n', data[0]['dataValues'].name)
         hbsObject.useritem = [];
         for (i = 0; i < data.length; i++) {
-          var newProduct = {
+          var newUserItem  = {
             id: data[i]['dataValues'].id,
             name: data[i]['dataValues'].name
           }
-          hbsObject.product.push(newProduct)
+          hbsObject.useritem.push(newUserItem)
+        }
+    })
+    // // queries db for all user items where userID is not reqUser
+    db.Useritem.findAll({
+      where: {
+        userId: {
+        $not:reqUser
         }
       }
-            res.render('dashboard', hbsObject)
-    });
-    // // queries db for all user items where userID is not reqUser
-    // db.Useritem.findAll({
-    //   where: {
-    //     userId: {
-    //     $not:reqUser
-    //     }
-    //   }
-    // }).then(function(data) {
-    //   hbsObject.communityitem = data
-    //   console.log(hbsObject)
-    //   res.render('dashboard', hbsObject)
-    // })
+    }).then(function(data) {
+      hbsObject.communityitem = [];
+        for (i = 0; i < data.length; i++) {
+          var newCommunityItem  = {
+            id: data[i]['dataValues'].id,
+            name: data[i]['dataValues'].name,
+            userId: data[i]['dataValues'].userId
+          }
+          hbsObject.communityitem.push(newCommunityItem)
+        }
+        console.log('\n**** community item\n', hbsObject.communityitem)
+      res.render('dashboard', hbsObject)
+    })
   }
 
   exports.forum = function(req, res) {
