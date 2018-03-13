@@ -50,7 +50,6 @@ body, html {
 }
 
 h1 {
-	margin-top: 2%;
 	color: green;
 	font-size: 110px;
 	text-align: center;
@@ -109,6 +108,29 @@ h5 {
 				linear-gradient(180deg, lightblue, transparent);
 }
 
+
+#signupSheet {
+  margin-top: 1%;
+  max-width: 100%;
+}
+
+.text {
+  color: black;
+  border: none;
+  outline: none;
+  height: 30px;
+  width: 400px;
+}
+
+.inputBoxie {
+  /*background-color: rgba(0, 0, 0, 0);*/
+  color: black;
+  border: none;
+  outline: none;
+  height: 30px;
+  width: 400px;
+}
+
 /*DASH STYLING*/
 
 #offering_scroll, #community_items_scroll {
@@ -117,11 +139,20 @@ h5 {
   overflow-y: hidden;
 }
 
+#community_items_scroll {
+  margin-top: 4%;
+}
+
 #offering_panel, #community_items_panel {
 	background-color: lightblue;
 	margin-top: 10%;
 	text-align: center;
-	padding: 10%;
+	padding: 5%;
+  opacity: .8;
+}
+
+.col-md-6 {
+  margin-top: 4%;
 }
 
 .thumbnail {
@@ -174,6 +205,7 @@ h5 {
 .navbar {
     margin-bottom: 1%;
     opacity: .4;
+    max-width: 100%;
 }
 
 #title {
