@@ -11,30 +11,54 @@ var db = require("../models");
 
   exports.dashboard = function(req, res) {
     var reqUser = req.session.passport.user;
-    console.log('\n\n******\n\n')
     var hbsObject = {};
     // queries db for all products
     db.Product.findAll({}).then(function(data) {
-      hbsObject.product = data
+      // console.log('\n*****\n', data[0]['dataValues'].item_name)
+      hbsObject.product = [];
+      for (i = 0; i < data.length; i++) {
+        var newProduct = {
+          id: data[i]['dataValues'].id,
+          name: data[i]['dataValues'].item_name,
+          photoUrl: data[i]['dataValues'].photo_url
+        }
+        hbsObject.product.push(newProduct)
+      }
+      // console.log(hbsObject.product)
     });
     // queries db for all user items where userID is reqUser
     // need to also get item_name and img url out of this, join to product table?
     db.Useritem.findAll({
       userId: reqUser
     }).then(function(data) {
-      hbsObject.useritem = data
-    });
-    // queries db for all user items where userID is not reqUser
-    db.Useritem.findAll({
-      where: {
-        userId: {
-        $not:reqUser
+      if(!data) {
+        next();
+      }
+      else{
+        // console.log('\n*****\n', data[0]['dataValues'].name)
+        hbsObject.useritem = [];
+        for (i = 0; i < data.length; i++) {
+          var newProduct = {
+            id: data[i]['dataValues'].id,
+            name: data[i]['dataValues'].name
+          }
+          hbsObject.product.push(newProduct)
         }
       }
-    }).then(function(data) {
-      hbsObject.communityitem = data
-      res.render('dashboard', hbsObject)
-    })
+            res.render('dashboard', hbsObject)
+    });
+    // // queries db for all user items where userID is not reqUser
+    // db.Useritem.findAll({
+    //   where: {
+    //     userId: {
+    //     $not:reqUser
+    //     }
+    //   }
+    // }).then(function(data) {
+    //   hbsObject.communityitem = data
+    //   console.log(hbsObject)
+    //   res.render('dashboard', hbsObject)
+    // })
   }
 
   exports.forum = function(req, res) {
