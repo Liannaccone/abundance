@@ -5,7 +5,7 @@ Abundance is your solution for helping your neighbors elimate food waste in the 
 
 ## Getting Started
 
-### When you first visit Abundant, click the "signup" button located on the homepage. 
+### When you first visit Abundance, click the "signup" button located on the homepage. 
 
 ![homescreen](/public/assets/images/screenshots/homescreen.png)
 
